@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Home page!!!</h1>
+
+<table border="1px solid">
+    <tr>
+        <th>Title</th>
+         <th>Description</th>
+         <th>Pub_Date</th>
+         <th>Author</th>
+        <th style="color:blue">Action_you_can_perform</th>
+    </tr>
+    {% for obj in data %}
+    <tr>
+        <td>{{ obj.title }}</td>
+         <td>{{ obj.description }}</td>
+         <td>{{ obj.pub_date }}</td>
+         <td>{{ obj.author }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+{% endblock %}
+
